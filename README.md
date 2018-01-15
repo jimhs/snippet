@@ -2,8 +2,11 @@
 collections for memo
 
 ## Portal
-PEP 8 [EN][PEP8] official
-PEP 8 [CN][PEP8_CN] nice translate
+
+### python coding standard
+PEP 8 [EN][PEP8] official  
+PEP 8 [CN1][PEP8_CN1] [CN1][PEP8_CN2] 网上搜到的一些好的翻译
+
 ### Gist
 ```
 /etc/hosts
@@ -12,4 +15,5 @@ PEP 8 [CN][PEP8_CN] nice translate
 ```
 
 [PEP8]: https://www.python.org/dev/peps/pep-0008/
-[PEP8_CN]: https://www.cnblogs.com/ajianbeyourself/p/4377933.html
+[PEP8_CN1]: https://www.cnblogs.com/ajianbeyourself/p/4377933.html
+[PEP8_CN2]: https://my.oschina.net/u/1433482/blog/464444?p=1
