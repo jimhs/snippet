@@ -10,7 +10,8 @@ pep8
 visual
 + [graphviz](http://www.graphviz.org)
 + [tikz](http://texample.net/tikz/)
-+ [用 Graphviz 可视化函数调用](https://www.ibm.com/developerworks/cn/linux/l-graphvis/)
++
++ [可视化函数调用](https://www.ibm.com/developerworks/cn/linux/l-graphvis/)
 
 math
 + [Strang on Linear Algebra](http://open.163.com/special/opencourse/daishu.html)
