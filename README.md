@@ -4,11 +4,12 @@ collections for memo
 ## Portal
 
 ### python coding standard, visual
-[PEP8][PEP8]
-
-[pylint](https://www.pylint.org)
-[graphviz](http://www.graphviz.org)
-[tikz](http://texample.net/tikz/)
+official
++ [PEP8][PEP8]
++ 
++ [pylint](https://www.pylint.org)
++ [graphviz](http://www.graphviz.org)
++ [tikz](http://texample.net/tikz/)
 
 一些好的翻译版本
 + PEP8 [cn1][PEP8_CN1] [cn2][PEP8_CN2]  
