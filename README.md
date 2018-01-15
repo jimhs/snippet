@@ -8,10 +8,8 @@ pep8
 + [pylint](https://www.pylint.org) [cn1][PYLINT_CN1]
 
 visual
-+ [graphviz](http://www.graphviz.org)
++ [graphviz](http://www.graphviz.org) [可视化函数调用](https://www.ibm.com/developerworks/cn/linux/l-graphvis/)
 + [tikz](http://texample.net/tikz/)
-+
-+ [可视化函数调用](https://www.ibm.com/developerworks/cn/linux/l-graphvis/)
 
 math
 + [Strang on Linear Algebra](http://open.163.com/special/opencourse/daishu.html)
