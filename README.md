@@ -4,11 +4,11 @@ collections for memo
 ## Portal
 
 ### python coding standard
-PEP8 [EN][PEP8] official  
+PEP8 [en][PEP8] official  
 
 一些好的翻译版本
-PEP8 [CN1][PEP8_CN1] [CN1][PEP8_CN2]  
-PYLINT [CN1][PYLINT_CN1]
++ PEP8 [cn1][PEP8_CN1] [cn2][PEP8_CN2]  
++ Pylint [cn1][PYLINT_CN1]
 
 ### Gist
 ```
