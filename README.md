@@ -3,19 +3,18 @@ collections for memo
 
 ## Portal
 
-### python coding standard, visual
-official
-+ [PEP8][PEP8]
-+ 
-+ [pylint](https://www.pylint.org)
+pep8
++ [PEP8][PEP8] [cn1][PEP8_CN1] [cn2][PEP8_CN2]
++ [pylint](https://www.pylint.org) [cn1][PYLINT_CN1]
+
+visual
 + [graphviz](http://www.graphviz.org)
 + [tikz](http://texample.net/tikz/)
-
-一些好的翻译版本
-+ PEP8 [cn1][PEP8_CN1] [cn2][PEP8_CN2]  
-+ Pylint [cn1][PYLINT_CN1]
-+ 
 + [用 Graphviz 可视化函数调用](https://www.ibm.com/developerworks/cn/linux/l-graphvis/)
+
+math
++ [Strang on Linear Algebra](http://open.163.com/special/opencourse/daishu.html)
++ [sympy](http://docs.sympy.org/latest/index.html)
 
 ### Gist
 ```
