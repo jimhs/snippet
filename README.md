@@ -20,6 +20,8 @@ visual
 math
 + [Strang on Linear Algebra](http://open.163.com/special/opencourse/daishu.html)
 + [sympy](http://docs.sympy.org/latest/index.html)
++ [线上生成latex](http://latex.codecogs.com/)
+
 
 ### Gist
 ```
@@ -34,5 +36,3 @@ math
 [PYLINT_CN1]: https://www.ibm.com/developerworks/cn/linux/l-cn-pylint/
 [UML_CN1]: http://www.uml.org.cn/oobject/201211231.asp
 [UML_CN2]: http://www.uml.org.cn/oobject/201104212.asp
-
-$$Error = \frac{1}{m_{dev}}\sum_{i=1}^{m_{dev}}L\{{\hat y^{(i)} \neq y^{(i)}}\}$$
