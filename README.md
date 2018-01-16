@@ -35,3 +35,4 @@ math
 [UML_CN1]: http://www.uml.org.cn/oobject/201211231.asp
 [UML_CN2]: http://www.uml.org.cn/oobject/201104212.asp
 
+$$Error = \frac{1}{m_{dev}}\sum_{i=1}^{m_{dev}}L\{{\hat y^{(i)} \neq y^{(i)}}\}$$
