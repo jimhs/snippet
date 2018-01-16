@@ -11,6 +11,7 @@ visual
 + [graphviz](http://www.graphviz.org) [可视化函数调用](https://www.ibm.com/developerworks/cn/linux/l-graphvis/)
 + [pyreverse](https://www.logilab.org/blogentry/6883)
   + pyreverse -o png -ASmy -k -f ALL -p Source source.py
+  + dot example.dot -Tpng -o example.png
 + [tikz](http://texample.net/tikz/)
 
 math
