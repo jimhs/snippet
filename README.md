@@ -12,6 +12,7 @@ visual
 + [pyreverse](https://www.logilab.org/blogentry/6883)
   + pyreverse -o png -ASmy -k -f ALL -p Source source.py
   + dot example.dot -Tpng -o example.png
++ [UML](https://en.wikipedia.org/wiki/Unified_Modeling_Language) [cn1][UML_CN1] [cn2][UML_CN2]
 + [tikz](http://texample.net/tikz/)
 
 math
@@ -29,4 +30,6 @@ math
 [PEP8_CN1]: https://www.cnblogs.com/ajianbeyourself/p/4377933.html
 [PEP8_CN2]: https://my.oschina.net/u/1433482/blog/464444?p=1
 [PYLINT_CN1]: https://www.ibm.com/developerworks/cn/linux/l-cn-pylint/
+[UML_CN1]: http://www.uml.org.cn/oobject/201211231.asp
+[UML_CN2]: http://www.uml.org.cn/oobject/201104212.asp
 
