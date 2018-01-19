@@ -3,6 +3,9 @@ collections for memo
 
 ## Portal
 
+bash
++ [dotfiles](http://dotfiles.github.io/)
+
 pep8
 + [PEP8][PEP8] [cn1][PEP8_CN1] [cn2][PEP8_CN2]
 + [pylint](https://www.pylint.org) [cn1][PYLINT_CN1]
