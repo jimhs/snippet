@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # List all functions
 listfunc () {
   for func in $(compgen -A function | grep -v _)
