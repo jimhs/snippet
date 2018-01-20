@@ -1,0 +1,4 @@
+# auto completion using prefixed key words, navigated thru up/down
+# bind -f ~/.inputrc; bind -P ~/.inputrc | grep history-search
+"\e[A": history-search-backward
+"\e[B": history-search-forward
