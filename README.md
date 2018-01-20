@@ -4,13 +4,16 @@ collections for memo
 ## Portal
 
 bash
+
 + [dotfiles](http://dotfiles.github.io/)
 
 pep8
+
 + [PEP8][PEP8] [cn1][PEP8_CN1] [cn2][PEP8_CN2]
 + [pylint](https://www.pylint.org) [cn1][PYLINT_CN1]
 
 visual
+
 + [graphviz](http://www.graphviz.org) 
   + [UML in dot](https://www.jianshu.com/p/d730f83bd81f)
   + [可视化函数调用](https://www.ibm.com/developerworks/cn/linux/l-graphvis/)
@@ -21,10 +24,15 @@ visual
 + [tikz](http://texample.net/tikz/)
 
 math
+
 + [Strang on Linear Algebra](http://open.163.com/special/opencourse/daishu.html)
 + [sympy](http://docs.sympy.org/latest/index.html)
 + [线上生成latex](http://latex.codecogs.com/)
 
+
+regex
+
++ [regex.info](http://www.regular-expressions.info/)
 
 ### Gist
 ```

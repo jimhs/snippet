@@ -16,8 +16,25 @@ alias g="git"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"    alias ls='ls --color=auto'
+	# -A Hide . & ..
+	# -a Show all, including . & ..
+	# -d List directory entries instead of contents
+	# -F Append indicator [*/=@|] to entries
+	# -h Human readable: K, M, G, T
+	# -l Long
+	# -1 Single column
+
+	alias l='/bin/ls -F --color=auto'
+	alias l1='/bin/ls -1 --color=auto'
+	alias la='/bin/ls -AF --color=auto'
+	alias ld='/bin/ls -l | grep "^d"'
+	alias ldown='/bin/ls -AF $(ls -A)' # show current dir & all dirs one level down
+	alias ll='/bin/ls -lhFA --color=auto'
+	alias ls='/bin/ls -F --color=auto'
+	alias lsd='/bin/ls -d */'
+	alias lsize='/bin/ls -l | sort -r -n +4'
+	
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -25,33 +42,6 @@ if [ -x /usr/bin/dircolors ]; then
     #alias fgrep='fgrep --color=auto'
     #alias egrep='egrep --color=auto'
 fi
-
-# some more ls aliases
-# alias ll='ls -l'
-# alias la='ls -A'
-# alias l='ls -CF'
-
-###
-## ls
-# 
-
-# -A Hide . & ..
-# -a Show all, including . & ..
-# -d List directory entries instead of contents
-# -F Append indicator [*/=@|] to entries
-# -h Human readable: K, M, G, T
-# -l Long
-# -1 Single column
-
-alias l='/bin/ls -F --color=auto'
-alias l1='/bin/ls -1 --color=auto'
-alias la='/bin/ls -AF --color=auto'
-alias ld='/bin/ls -l | grep "^d"'
-alias ldown='/bin/ls -AF $(ls -A)' # show current dir & all dirs one level down
-alias ll='/bin/ls -lhFA --color=auto'
-alias ls='/bin/ls -F --color=auto'
-alias lsd='/bin/ls -d */'
-alias lsize='/bin/ls -l | sort -r -n +4'
 
 ###
 ## history
