@@ -1,6 +1,10 @@
 # snippets
 collections for memo
 
+## 原创翻译
+- Bash Cookbook 学习笔记 [【基础】][BASH_BASIC]  finished: Dec.02 2017
+- Bash Cookbook 学习笔记 [【工具】][BASH_TOOLS]  updated:  Jan.13 2018
+  
 ## Portal
 
 bash
@@ -41,6 +45,8 @@ regex
 192.30.253.119 gist.github.com
 ```
 
+[BASH_BASIC]: https://segmentfault.com/a/1190000011951451
+[BASH_TOOLS]: https://segmentfault.com/a/1190000012255541
 [PEP8]: https://www.python.org/dev/peps/pep-0008/
 [PEP8_CN1]: https://www.cnblogs.com/ajianbeyourself/p/4377933.html
 [PEP8_CN2]: https://my.oschina.net/u/1433482/blog/464444?p=1
