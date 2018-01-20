@@ -3,24 +3,25 @@
 -------------------------------------------------------------------------
 SED单行脚本快速参考（Unix 流编辑器）                       2005年12月29日
 
-英文标题：USEFUL ONE-LINE SCRIPTS FOR SED (Unix stream editor)
-原标题：HANDY ONE-LINERS FOR SED (Unix stream editor)
+    英文标题：USEFUL ONE-LINE SCRIPTS FOR SED (Unix stream editor)
+    原标题：HANDY ONE-LINERS FOR SED (Unix stream editor)
 
-整理：Eric Pement  - 电邮：pemente[at]northpark[dot]edu         版本5.5
-译者：Joe Hong     - 电邮：hq00e[at]126[dot]com
+    整理：Eric Pement  - 电邮：pemente[at]northpark[dot]edu         版本5.5
+    译者：Joe Hong     - 电邮：hq00e[at]126[dot]com
 
 在以下地址可找到本文档的最新（英文）版本：
-   http://sed.sourceforge.net/sed1line.txt
-   http://www.pement.org/sed/sed1line.txt
+
+       http://sed.sourceforge.net/sed1line.txt
+       http://www.pement.org/sed/sed1line.txt
 
 其他语言版本：
-  中文          - http://sed.sourceforge.net/sed1line_zh-CN.html
-  捷克语        - http://sed.sourceforge.net/sed1line_cz.html
-  荷语          - http://sed.sourceforge.net/sed1line_nl.html
-  法语          - http://sed.sourceforge.net/sed1line_fr.html
-  德语          - http://sed.sourceforge.net/sed1line_de.html
 
-  葡语          - http://sed.sourceforge.net/sed1line_pt-BR.html
+      中文          - http://sed.sourceforge.net/sed1line_zh-CN.html
+      捷克语        - http://sed.sourceforge.net/sed1line_cz.html
+      荷语          - http://sed.sourceforge.net/sed1line_nl.html
+      法语          - http://sed.sourceforge.net/sed1line_fr.html
+      德语          - http://sed.sourceforge.net/sed1line_de.html
+      葡语          - http://sed.sourceforge.net/sed1line_pt-BR.html
 
 
 文本间隔：
@@ -450,15 +451,15 @@ sedmod以及GNU sed v3.02.80。
 度在65个字符或65个以下的sed脚本〔译注1〕。本文档的各种脚本是由以下所列作
 者所写或提供：
 
- Al Aab                               # 建立了“seders”邮件列表
- Edgar Allen                          # 许多方面
- Yiorgos Adamopoulos                  # 许多方面
- Dale Dougherty                       # 《sed & awk》作者
- Carlos Duarte                        # 《do it with sed》作者
- Eric Pement                          # 本文档的作者
- Ken Pizzini                          # GNU sed v3.02 的作者
- S.G. Ravenhall                       # 去html标签脚本
- Greg Ubben                           # 有诸多贡献并提供了许多帮助
+     Al Aab                               # 建立了“seders”邮件列表
+     Edgar Allen                          # 许多方面
+     Yiorgos Adamopoulos                  # 许多方面
+     Dale Dougherty                       # 《sed & awk》作者
+     Carlos Duarte                        # 《do it with sed》作者
+     Eric Pement                          # 本文档的作者
+     Ken Pizzini                          # GNU sed v3.02 的作者
+     S.G. Ravenhall                       # 去html标签脚本
+     Greg Ubben                           # 有诸多贡献并提供了许多帮助
 -------------------------------------------------------------------------
 
 译注1：大部分情况下，sed脚本无论多长都能写成单行的形式（通过`-e'选项和`;'
