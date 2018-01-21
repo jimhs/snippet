@@ -1,6 +1,9 @@
 #!/bin/bash
 
-# gawk mutt lynx
+third_parties='gawk mutt lynx'
+
+# convert table from pdf to md
+sed 's/^/|/; s/$/|/; s/ / |/1'
 
 # history汇总
 cat .bash_history | awk '{print $1}' | sort | uniq -c | sort -n > ~/bash/.bash_hitory_trimmed
