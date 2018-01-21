@@ -24,14 +24,6 @@ SED单行脚本快速参考（Unix 流编辑器）                       2005年
       葡语          - http://sed.sourceforge.net/sed1line_pt-BR.html
 
 
-自用：
---------
-
-```bash
-# convert table from pdf to md
-sed 's/^/|/; s/$/|/; s/ / |/1'
-```
-
 文本间隔：
 --------
 
