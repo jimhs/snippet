@@ -3,7 +3,7 @@ collections for memo
 
 ## 原创翻译
 - [Bash Cookbook 学习笔记 【基础】][BASH_BASIC]  finished: Dec.02 2017
-- [Bash Cookbook 学习笔记 【工具】][BASH_TOOLS]  finished: Jan.21 2018
+- [Bash Cookbook 学习笔记 【中级】][BASH_TOOLS]  finished: Jan.21 2018
   
 ## Portal
 
