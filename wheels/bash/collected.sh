@@ -8,3 +8,6 @@ cat .bash_history | awk '{print $1}' | sort | uniq -c | sort -n > ~/bash/.bash_h
 # link crawler
 # how to multi-threads?
 lynx -dump http://www.mutt.org/screenshots/ | awk '/http/{print $2}' | grep gif | wget -i gifs
+
+# 搜狗拼音输入法异常错误时，重启fcitx
+ps aux | grep fcitx | awk 'NR==1 {print $2}' | xargs kill
