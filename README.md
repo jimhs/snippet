@@ -4,6 +4,7 @@ collections for memo
 ## 原创翻译
 - [Bash Cookbook 学习笔记 【基础】][BASH_BASIC]  finished: Dec.02 2017
 - [Bash Cookbook 学习笔记 【中级】][BASH_TOOLS]  finished: Jan.21 2018
+- [Bash Cookbook 学习笔记 【高级】][BASH_ADVNC]  updated: Jan.22 2018
   
 ## Portal
 
@@ -47,6 +48,7 @@ regex
 
 [BASH_BASIC]: https://segmentfault.com/a/1190000011951451
 [BASH_TOOLS]: https://segmentfault.com/a/1190000012255541
+[BASH_ADVNC]: https://segmentfault.com/a/1190000012943235
 [PEP8]: https://www.python.org/dev/peps/pep-0008/
 [PEP8_CN1]: https://www.cnblogs.com/ajianbeyourself/p/4377933.html
 [PEP8_CN2]: https://my.oschina.net/u/1433482/blog/464444?p=1
