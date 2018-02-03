@@ -8,6 +8,12 @@ sed 's/^/|/; s/$/|/; s/ / |/1'
 # history汇总
 cat .bash_history | awk '{print $1}' | sort | uniq -c | sort -n > ~/bash/.bash_hitory_trimmed
 
+# 系统可用shell
+cat /etc/shells
+
+# 登录日志
+sudo tail -n 10 /var/log/auth.log
+
 # link crawler
 # how to multi-threads?
 lynx -dump http://www.mutt.org/screenshots/ | awk '/http/{print $2}' | grep gif | wget -i gifs
