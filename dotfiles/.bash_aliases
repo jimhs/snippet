@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -18,25 +16,8 @@ alias g="git"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"    alias ls='ls --color=auto'
-	# -A Hide . & ..
-	# -a Show all, including . & ..
-	# -d List directory entries instead of contents
-	# -F Append indicator [*/=@|] to entries
-	# -h Human readable: K, M, G, T
-	# -l Long
-	# -1 Single column
-
-	alias l='/bin/ls -F --color=auto'
-	alias l1='/bin/ls -1 --color=auto'
-	alias la='/bin/ls -AF --color=auto'
-	alias ld='/bin/ls -l | grep "^d"'
-	alias ldown='/bin/ls -AF $(ls -A)' # show current dir & all dirs one level down
-	alias ll='/bin/ls -lhFA --color=auto'
-	alias ls='/bin/ls -F --color=auto'
-	alias lsd='/bin/ls -d */'
-	alias lsize='/bin/ls -l | sort -r -n +4'
-	
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -45,9 +26,36 @@ if [ -x /usr/bin/dircolors ]; then
     #alias egrep='egrep --color=auto'
 fi
 
+# some more ls aliases
+# alias ll='ls -l'
+# alias la='ls -A'
+# alias l='ls -CF'
+
+###
+## ls
+#
+
+# -A Hide . & ..
+# -a Show all, including . & ..
+# -d List directory entries instead of contents
+# -F Append indicator [*/=@|] to entries
+# -h Human readable: K, M, G, T
+# -l Long
+# -1 Single column
+
+alias l='/bin/ls -F --color=auto'
+alias l1='/bin/ls -1 --color=auto'
+alias la='/bin/ls -AF --color=auto'
+alias ld='/bin/ls -l | grep "^d"'
+alias ldown='/bin/ls -AF $(ls -A)' # show current dir & all dirs one level down
+alias ll='/bin/ls -lhFA --color=auto'
+alias ls='/bin/ls -F --color=auto'
+alias lsd='/bin/ls -d */'
+alias lsize='/bin/ls -l | sort -r -n +4'
+
 ###
 ## history
-# 
+#
 
 # Show the date & time in history
 alias histdateon='export HISTTIMEFORMAT="%F %T "'
@@ -64,7 +72,7 @@ alias wgetpage='wget --html-extension --recursive --convert-links --page-requisi
 
 ###
 ## Software Management
-# 
+#
 
 # List all packages | grep for selected
 alias deblist='dpkg -l | grep $1'
@@ -85,3 +93,13 @@ alias zip='zip -r -9'
 # Put each path on a separate line instead of running it all together
 alias path='echo $PATH | tr ":" "\n"'
 
+# alias for cnpm
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
+  --cache=$HOME/.npm/.cache/cnpm \
+  --disturl=https://npm.taobao.org/dist \
+  --userconfig=$HOME/.cnpmrc"
+
+# correct color of tmux @apr.12
+# alias tmux="TERM=screen-256color-bce tmux"
+
+alias lz='curl wttr.in/~liuzhou'              # 查看天气预报

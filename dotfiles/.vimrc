@@ -1,5 +1,7 @@
 set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
 
+set termguicolors
+
 set nocompatible " be iMproved, required
 filetype off " required
 set nowrapscan
@@ -8,31 +10,49 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'kabbamine/vcoolor.vim'
-Plugin 'guns/vim-sexp'
+""""""""""""""""""""""""""""""
+"welcome page
+Plugin 'mhinz/vim-startify'
+
+"syntax highlight
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'suan/vim-instant-markdown'
+Plugin 'posva/vim-vue'
+
+"auto complete
 Plugin 'mattn/emmet-vim'
-Plugin 'dhruvasagar/vim-table-mode'
-Plugin 'gorodinskiy/vim-coloresque'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'walm/jshint.vim'
-Plugin 'Yggdroot/indentLine'
-Plugin 'nvie/vim-flake8'
-"if has('python3')
+Plugin 'tpope/vim-surround'
+if has('python3')
 Plugin 'davidhalter/jedi-vim'
 Plugin 'SirVer/ultisnips'
-"endif
-Plugin 'axiaoxin/favorite-vim-colorscheme'
-Plugin 'mhinz/vim-startify'
+endif
+
+"gramma check
+Plugin 'walm/jshint.vim'
+Plugin 'nvie/vim-flake8'
+
+"css/less/sass/html color preview
+Plugin 'gorodinskiy/vim-coloresque'
+
+"color theme
+" Plugin 'flazz/vim-colorschemes'
+Plugin 'chriskempson/base16-vim'
+
+"color picker
+Plugin 'kabbamine/vcoolor.vim'
+
+"unsorted
+Plugin 'tpope/vim-unimpaired'
+Plugin 'guns/vim-sexp'
+Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'Yggdroot/indentLine'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'suan/vim-instant-markdown'
 Plugin 'honza/vim-snippets'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
-Plugin 'posva/vim-vue'
+""""""""""""""""""""""""""""""
 call vundle#end()
 
 filetype plugin indent on " required
@@ -42,6 +62,7 @@ filetype plugin indent on " required
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" :PluginUpdate     - Update all configured bundles; press 'u' after complete to see changelog, 'l' to see error list
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
@@ -77,7 +98,7 @@ set smartcase
 
 set guifont=Menlo:h14
 
-colorscheme Tomorrow-Night-Bright
+colorscheme base16-irblack
 
 " 在状态栏显示正在输入的命令
 set showcmd
@@ -248,3 +269,15 @@ let g:vcoolor_map = '<leader>cp'
 let g:vcool_ins_rgb_map = '<leader>cpr'       " Insert rgb color.
 let g:vcool_ins_hsl_map = '<leader>cph'       " Insert hsl color.
 let g:vcool_ins_rgba_map = '<leader>cpra'      " Insert rgba color.
+
+" emmit prefix
+let g:user_emmet_leader_key = '<C-y>'
+
+function! s:base16_customize() abort
+  call Base16hi("MatchParen", g:base16_gui05, g:base16_gui03, g:base16_cterm05, g:base16_cterm03, "bold,italic", "")
+endfunction
+
+augroup on_change_colorschema
+  autocmd!
+  autocmd ColorScheme * call s:base16_customize()
+augroup END

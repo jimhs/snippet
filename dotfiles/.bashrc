@@ -17,7 +17,7 @@ shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
-HISTFILESIZE=2000
+HISTFILESIZE=10000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -88,6 +88,10 @@ if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi
 
+if [ -f ~/.self/.bash_aliases2 ]; then
+    . ~/.self/.bash_aliases2
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -102,7 +106,31 @@ fi
 # added by Anaconda3 4.4.0 installer
 export PATH="/home/jimhs/anaconda3/bin:$PATH"
 
+# add nodejs/bin path @apr.11
+export PATH="/home/jimhs/node-v8.11.1-linux-x64/bin/:$PATH"
+
 export EDITOR='vim'
 
 # disable XOFF flow control to free ctrl-s
 stty -ixon
+
+# @Apr.13 fr git:skywind3000
+# 放到你的 ~/.bashrc 配置文件中，给 man 增加漂亮的色彩高亮
+export LESS_TERMCAP_mb=$'\E[1m\E[32m'
+export LESS_TERMCAP_mh=$'\E[2m'
+export LESS_TERMCAP_mr=$'\E[7m'
+export LESS_TERMCAP_md=$'\E[1m\E[36m'
+export LESS_TERMCAP_ZW=""
+export LESS_TERMCAP_us=$'\E[4m\E[1m\E[37m'
+export LESS_TERMCAP_me=$'\E(B\E[m'
+export LESS_TERMCAP_ue=$'\E[24m\E(B\E[m'
+export LESS_TERMCAP_ZO=""
+export LESS_TERMCAP_ZN=""
+export LESS_TERMCAP_se=$'\E[27m\E(B\E[m'
+export LESS_TERMCAP_ZV=""
+export LESS_TERMCAP_so=$'\E[1m\E[33m\E[44m'
+
+# @Apr.13 git:sjl/t
+alias t='python ~/repo/others/t/t.py --task-dir ~/repo/others/t/tasks --list tasks'
+export PS1='[$(t | wc -l | sed -e"s/ *//")]'" $PS1"
+
