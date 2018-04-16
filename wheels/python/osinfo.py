@@ -11,25 +11,30 @@
 
 # Description		: Displays some information about the OS you are running this script on
 
+# Revised : Jimhs @apr.16
+# + line adjust | fcolors
+# - some unuseful profiles
+
 import platform as pl
 
 profile = [
         'architecture',
-        'linux_distribution',
-        'mac_ver',
-        'machine',
+#        'linux_distribution',
+#        'mac_ver',
+#        'machine',
         'node',
         'platform',
-        'processor',
+#        'processor',
         'python_build',
         'python_compiler',
         'python_version',
-        'release',
-        'system',
-        'uname',
+#        'release',
+#        'system',
+#        'uname',
         'version',
     ]
 
+span = max([len(x) for x in profile])
 
 class bcolors:
     HEADER = '\033[95m'
@@ -41,7 +46,12 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
+class fcolors:
+    GREEN = '\033[32m'
+    YELLOW = '\033[33m'
+    BLUE = '\033[36m'
 
 for key in profile:
     if hasattr(pl, key):
-        print(key + bcolors.BOLD + ": " + str(getattr(pl, key)()) + bcolors.ENDC)
+        line = fcolors.YELLOW + key.rjust(span) + " : " + bcolors.BOLD + str(getattr(pl, key)()) + bcolors.ENDC
+        print(line)

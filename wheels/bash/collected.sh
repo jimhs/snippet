@@ -45,3 +45,6 @@ lspci | grep Wireless
 sudo modinfo rtl8723be
 modprobe -r rtl8723be
 modprobe rtl8723be
+
+# pip update all
+pip install -U distribute && pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
