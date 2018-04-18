@@ -29,7 +29,7 @@ endif
 
 "gramma check
 Plugin 'walm/jshint.vim'
-Plugin 'nvie/vim-flake8'
+"Plugin 'nvie/vim-flake8'
 
 "css/less/sass/html color preview
 Plugin 'gorodinskiy/vim-coloresque'
@@ -205,6 +205,9 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 " instant-markdown
 let g:instant_markdown_slow = 1
 
+" manual load :InstantMarkdownPreview
+let g:instant_markdown_autostart = 0
+
 " airline
 let g:airline_section_y = '%{strftime("%H:%M")}'
 " 开启tabline
@@ -221,11 +224,11 @@ autocmd FileType python3 setlocal completeopt-=preview
 let g:jedi#completions_command = "<C-n>"
 
 " flake8
-let g:flake8_show_in_file = 1
-let g:flake8_show_in_gutter = 1
-autocmd! BufRead,BufWritePost *.py call Flake8()
-let g:syntastic_python_checkers=['flake8']
-let g:syntastic_python_flake8_args='--ignore=E501'
+" let g:flake8_show_in_file = 1
+" let g:flake8_show_in_gutter = 1
+" autocmd! BufRead,BufWritePost *.py call Flake8()
+" let g:syntastic_python_checkers=['flake8']
+" let g:syntastic_python_flake8_args='--ignore=E501'
 
 " ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -272,6 +275,8 @@ let g:vcool_ins_rgba_map = '<leader>cpra'      " Insert rgba color.
 
 " emmit prefix
 let g:user_emmet_leader_key = '<C-y>'
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 function! s:base16_customize() abort
   call Base16hi("MatchParen", g:base16_gui05, g:base16_gui03, g:base16_cterm05, g:base16_cterm03, "bold,italic", "")
