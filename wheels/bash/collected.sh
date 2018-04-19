@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# git ssh
+# 1. ssh-keygen -t rsa -C && cat ~/.ssh/id_rsa.pub
+# 2. ssh -T git@github.com
+# 3. cd foobar && git remote -v
+# 4. git remote set-url origin git@github.com:jimhs/foobar.git
+
 third_parties='gawk mutt lynx'
 
 # convert table from pdf to md
