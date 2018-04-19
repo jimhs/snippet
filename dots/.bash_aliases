@@ -130,5 +130,3 @@ alias myip="curl ip.cn"
 #      -g preserve group
 #      -o preserve owner
 #      -D --devices --specials
-
-# @may
