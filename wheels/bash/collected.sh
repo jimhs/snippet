@@ -21,6 +21,39 @@ lynx -dump http://www.mutt.org/screenshots/ | awk '/http/{print $2}' | grep gif 
 # 搜狗拼音输入法异常错误时，重启fcitx
 ps aux | grep fcitx | awk 'NR==1 {print $2}' | xargs kill
 
+# pip update all
+pip install -U distribute && pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
+
+# file system arch
+man hier
+
+# test conds
+man test
+
+# table view of all mountings
+mount | column -t
+
+# char code of key press
+showkey -a
+
+# bind hot-key
+bind -x '"\C-l":ls -l'
+
+# band test
+# $ dd if=/dev/zero of=/dev/null bs=1M count=32768
+# 32768+0 records in
+# 32768+0 records out
+# 34359738368 bytes (34 GB, 32 GiB) copied, 2.17603 s, 15.8 GB/s
+dd if=/dev/zero of=/dev/null bs=1M count=32768
+
+# see my ip
+curl ip.cn
+
+# see my ip on ssh
+# jimhs@xxx$ echo ${SSH_CLIENT%% *}
+# xxx.xx.xxx.xxx
+echo ${SSH_CLIENT%% *}
+
 # wifi problem
 /etc/modprobe.d/rtl8723be.conf
 
@@ -45,6 +78,3 @@ lspci | grep Wireless
 sudo modinfo rtl8723be
 modprobe -r rtl8723be
 modprobe rtl8723be
-
-# pip update all
-pip install -U distribute && pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U

@@ -99,11 +99,34 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --disturl=https://npm.taobao.org/dist \
   --userconfig=$HOME/.cnpmrc"
 
-# correct color of tmux @apr.12
+# @apr
+# correct color of tmux; no need
 # alias tmux="TERM=screen-256color-bce tmux"
-
-# 查看天气预报 @apr.12
+# 查看天气预报
 alias lz='curl wttr.in/~liuzhou'
-
-# @apr.16
+# fr os.version_info
 alias osinfo="python ~/snippets/wheels/python/osinfo.py"
+# restart sougu if crash 
+alias sogou="ps aux | grep fcitx | awk 'NR==1 {print $2}' | xargs kill"
+# band test
+alias band="dd if=/dev/zero of=/dev/null bs=1M count=32768"
+# see my ip
+alias myip="curl ip.cn"
+
+# rsync ssh
+# chmod -R 700 dest
+#
+# rsync -avz source/ user@host:dest/
+# -v verbose
+# -z compress during transfer
+# -a = -rlptgoD (no -H,-A,-X)
+#                   -H preserve hard links
+#                   -A preserve ACLs (implies -p)
+#                   -X preserve extended attributes
+#      -r recurse into directories
+#      -l copy symlinks as symlinks
+#      -p preserve permission
+#      -t preserve mod time
+#      -g preserve group
+#      -o preserve owner
+#      -D --devices --specials
