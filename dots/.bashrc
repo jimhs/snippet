@@ -130,6 +130,13 @@ export LESS_TERMCAP_se=$'\E[27m\E(B\E[m'
 export LESS_TERMCAP_ZV=""
 export LESS_TERMCAP_so=$'\E[1m\E[33m\E[44m'
 
+# @apr.19
+# echo ----LINE_SUCCESS-----  &&  $SETCOLOR_SUCCESS
+export SETCOLOR_SUCCESS="echo -en \\033[1;32m"
+export SETCOLOR_FAILURE="echo -en \\033[1;31m"
+export SETCOLOR_WARNING="echo -en \\033[1;33m"
+export SETCOLOR_NORMAL="echo -en \\033[0;39m"
+
 # @Apr.13 git:sjl/t
 alias t='python ~/repo/others/t/t.py --task-dir ~/repo/others/t/tasks --list tasks'
 export PS1='[\[\033[33m\]$(t | wc -l | sed -e"s/ *//")\[\033[0m\]]'" $PS1"
