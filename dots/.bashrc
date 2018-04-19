@@ -115,7 +115,7 @@ export EDITOR='vim'
 stty -ixon
 
 # @Apr.13 fr git:skywind3000
-# 放到你的 ~/.bashrc 配置文件中，给 man 增加漂亮的色彩高亮
+# man色彩高亮
 export LESS_TERMCAP_mb=$'\E[1m\E[32m'
 export LESS_TERMCAP_mh=$'\E[2m'
 export LESS_TERMCAP_mr=$'\E[7m'
@@ -129,13 +129,6 @@ export LESS_TERMCAP_ZN=""
 export LESS_TERMCAP_se=$'\E[27m\E(B\E[m'
 export LESS_TERMCAP_ZV=""
 export LESS_TERMCAP_so=$'\E[1m\E[33m\E[44m'
-
-# @apr.19
-# echo ----LINE_SUCCESS-----  &&  $SETCOLOR_SUCCESS
-export SETCOLOR_SUCCESS="echo -en \\033[1;32m"
-export SETCOLOR_FAILURE="echo -en \\033[1;31m"
-export SETCOLOR_WARNING="echo -en \\033[1;33m"
-export SETCOLOR_NORMAL="echo -en \\033[0;39m"
 
 # @Apr.13 git:sjl/t
 alias t='python ~/repo/others/t/t.py --task-dir ~/repo/others/t/tasks --list tasks'
