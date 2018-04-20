@@ -10,7 +10,6 @@ alias -- -="cd -"
 alias d="cd ~/Documents"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias f="cd ~/finbot"
 alias p="cd ~/anaconda3/lib/python3.6/site-packages"
 alias g="git"
 
@@ -106,7 +105,7 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
 alias lz='curl wttr.in/~liuzhou'
 # fr os.version_info
 alias osinfo="python ~/snippets/wheels/python/osinfo.py"
-# restart sougu if crash 
+# restart sougu if crash
 alias sogou="ps aux | grep fcitx | awk 'NR==1 {print $2}' | xargs kill"
 # band test
 alias band="dd if=/dev/zero of=/dev/null bs=1M count=32768"
