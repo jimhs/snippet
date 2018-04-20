@@ -6,6 +6,10 @@
 # 3. cd foobar && git remote -v
 # 4. git remote set-url origin git@github.com:jimhs/foobar.git
 
+# add to /etc/hosts
+192.30.253.118	gist.github.com
+192.30.253.119	gist.github.com
+
 third_parties='gawk mutt lynx'
 
 # convert table from pdf to md

@@ -1,4 +1,29 @@
 
+##############################################################################
+# 文本处理 - awk / sed
+##############################################################################
+
+awk '{print $5}' file              # 打印文件中以空格分隔的第五列
+awk -F ',' '{print $5}' file       # 打印文件中以逗号分隔的第五列
+awk '/str/ {print $2}' file        # 打印文件中包含 str 的所有行的第二列
+awk -F ',' '{print $NF}' file      # 打印逗号分隔的文件中的每行最后一列
+awk '{s+=$1} END {print s}' file   # 计算所有第一列的合
+awk 'NR%3==1' file                 # 从第一行开始，每隔三行打印一行
+
+sed 's/find/replace/' file         # 替换文件中首次出现的字符串并输出结果
+sed '10s/find/replace/' file       # 替换文件第 10 行内容
+sed '10,20s/find/replace/' file    # 替换文件中 10-20 行内容
+sed -r 's/regex/replace/g' file    # 替换文件中所有出现的字符串
+sed -i 's/find/replace/g' file     # 替换文件中所有出现的字符并且覆盖文件
+sed '/line/s/find/replace/' file   # 先搜索行特征再执行替换
+sed -e 's/f/r/' -e 's/f/r' file    # 执行多次替换
+sed 's#find#replace#' file         # 使用 # 替换 / 来避免 pattern 中有斜杆
+sed -i -r 's/^\s+//g' file         # 删除文件每行头部空格
+sed '/^$/d' file                   # 删除文件空行并打印
+sed -i 's/\s\+$//' file            # 删除文件每行末尾多余空格
+sed -n '2p' file                   # 打印文件第二行
+sed -n '2,5p' file                 # 打印文件第二到第五行
+
 
 -------------------------------------------------------------------------
 SED单行脚本快速参考（Unix 流编辑器）                       2005年12月29日
@@ -13,16 +38,6 @@ SED单行脚本快速参考（Unix 流编辑器）                       2005年
 
        http://sed.sourceforge.net/sed1line.txt
        http://www.pement.org/sed/sed1line.txt
-
-其他语言版本：
-
-      中文          - http://sed.sourceforge.net/sed1line_zh-CN.html
-      捷克语        - http://sed.sourceforge.net/sed1line_cz.html
-      荷语          - http://sed.sourceforge.net/sed1line_nl.html
-      法语          - http://sed.sourceforge.net/sed1line_fr.html
-      德语          - http://sed.sourceforge.net/sed1line_de.html
-      葡语          - http://sed.sourceforge.net/sed1line_pt-BR.html
-
 
 文本间隔：
 --------
@@ -250,7 +265,7 @@ SED单行脚本快速参考（Unix 流编辑器）                       2005年
  sed '52!d'                       # 方法2
  sed '52q;d'                      # 方法3, 处理大文件时更有效率
 
- # 从第3行开始，每7行显示一次    
+ # 从第3行开始，每7行显示一次
  gsed -n '3~7p'                   # 只对GNU sed有效
  sed -n '3,${p;n;n;n;n;n;n;}'     # 其他sed
 
@@ -446,7 +461,7 @@ sedmod以及GNU sed v3.02.80。
    sed -n '51q;45,50p' filename       # 一样，但快得多
 
 如果你有其他的单行脚本想与大家分享或者你发现了本文档中错误的地方，请发电
-子邮件给本文档的作者（Eric Pement）。邮件中请记得提供你所使用的sed版本、 
+子邮件给本文档的作者（Eric Pement）。邮件中请记得提供你所使用的sed版本、
 该sed所运行的操作系统及对问题的适当描述。本文所指的单行脚本指命令行的长
 度在65个字符或65个以下的sed脚本〔译注1〕。本文档的各种脚本是由以下所列作
 者所写或提供：
