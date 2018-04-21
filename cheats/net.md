@@ -46,6 +46,10 @@ lynx -dump http://www.mutt.org/screenshots/ | awk '/http/{print $2}' | grep gif 
 
 # pip update all
 pip install -U distribute && pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
+
+# pip speedup 
+# https://segmentfault.com/q/1010000000162410
+# ~/.config/pip/pip.conf
 ```
 
 ## wifi problem
