@@ -235,7 +235,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " jshint
-autocmd! BufRead,BufWritePost *.js :JSHint
+"autocmd! BufRead,BufWritePost *.js :JSHint
 
 " vim-table-mode: markdown
 let g:table_mode_corner="|"
