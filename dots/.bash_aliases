@@ -7,10 +7,13 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias p="cd ~/anaconda3/lib/python3.6/site-packages"
+shopt -s cdable_vars
+export Documents="$HOME/Documents"
+export Downloads="$HOME/Downloads"
+export Desktop="$HOME/Desktop/"
+export sitepackages="$HOME/anaconda3/lib/python3.6/site-packages"
+export awk_="/usr/share/awk/"
+
 alias g="git"
 
 # enable color support of ls and also add handy aliases
@@ -111,6 +114,11 @@ alias sogou="ps aux | grep fcitx | awk 'NR==1 {print $2}' | xargs kill"
 alias band="dd if=/dev/zero of=/dev/null bs=1M count=32768"
 # see my ip
 alias myip="curl ip.cn"
+# git:sjl/t
+alias t='python ~/repo/others/t/t.py --task-dir ~/repo/others/t/tasks --list tasks'
+export PS1='[\[\033[33m\]$(t | wc -l | sed -e"s/ *//")\[\033[0m\]]'" $PS1"
+# re-source
+alias sb="source ~/.bashrc"
 
 # rsync ssh
 # chmod -R 700 dest
