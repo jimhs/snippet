@@ -61,14 +61,14 @@ options rtl8723be debug=1
 options rtl8723be disable_watchdog=1
 options rtl8723be ant_sel=2
 
-swenc:Set to 1 for software crypto (default 0)
-ips:Set to 0 to not use link power save (default 1)
-swlps:Set to 1 to use SW control power save (default 0)
-fwlps:Set to 1 to use FW control power save (default 1)
-msi:Set to 1 to use MSI interrupts mode (default 0)
-debug:Set debug level (0-5) (default 0) (int)
-disable_watchdog:Set to 1 to disable the watchdog (default 0)
-ant_sel:Set to 1 or 2 to force antenna number (default 0)
+# swenc:Set to 1 for software crypto (default 0)
+# ips:Set to 0 to not use link power save (default 1)
+# swlps:Set to 1 to use SW control power save (default 0)
+# fwlps:Set to 1 to use FW control power save (default 1)
+# msi:Set to 1 to use MSI interrupts mode (default 0)
+# debug:Set debug level (0-5) (default 0) (int)
+# disable_watchdog:Set to 1 to disable the watchdog (default 0)
+# ant_sel:Set to 1 or 2 to force antenna number (default 0)
 
 # =
 lspci | grep Wireless
