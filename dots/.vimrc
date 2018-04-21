@@ -12,7 +12,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 """"""""""""""""""""""""""""""
 "welcome page
-Plugin 'mhinz/vim-startify'
+"Plugin 'mhinz/vim-startify'
 
 "syntax highlight
 Plugin 'kien/rainbow_parentheses.vim'
@@ -27,29 +27,28 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'SirVer/ultisnips'
 endif
 
-"gramma check
-Plugin 'walm/jshint.vim'
+"gramma
+Plugin 'w0rp/ale'
+"Plugin 'walm/jshint.vim'
 "Plugin 'nvie/vim-flake8'
 
 "css/less/sass/html color preview
 Plugin 'gorodinskiy/vim-coloresque'
 
-"color theme
+"color/theme
 " Plugin 'flazz/vim-colorschemes'
 Plugin 'chriskempson/base16-vim'
-
-"color picker
+Plugin 'bling/vim-airline'
 Plugin 'kabbamine/vcoolor.vim'
 
 "unsorted
 Plugin 'tpope/vim-unimpaired'
 Plugin 'guns/vim-sexp'
 Plugin 'dhruvasagar/vim-table-mode'
-Plugin 'jelera/vim-javascript-syntax'
+"Plugin 'jelera/vim-javascript-syntax'
 Plugin 'Yggdroot/indentLine'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'honza/vim-snippets'
-Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 """"""""""""""""""""""""""""""
@@ -286,3 +285,57 @@ augroup on_change_colorschema
   autocmd!
   autocmd ColorScheme * call s:base16_customize()
 augroup END
+
+" ale and langs
+" https://github.com/w0rp/ale
+" https://prettier.io/docs/en/vim.html
+"""""""""""""""""""""""""""""""""""""""
+" manual
+" :ALELint
+" :ALEFix
+
+" bed into Airline
+let g:airline#extensions#ale#enabled = 1
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+" customized statusline
+" :help ale#statusline#Count()
+
+" :help ale-navigation-commands
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" don't lint on 'open' or 'edit', but on 'save'
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = 'never' " ['never' | 'normal']
+let g:ale_fix_on_save = 1
+
+" route to npm ['eslint' | 'prettier' | 'standard']
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier']
+
+" pass arg-string to cli
+"let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
+
+" use local config
+"let g:ale_javascript_prettier_use_local_config = 1
+
+" add a key map to 'gp'
+"nnoremap gp :silent %!prettier --stdin --trailing-comma all --single-quote
+
+" use quickfix instead of loclist
+"let g:ale_set_loclist = 0
+"let g:ale_set_quickfix = 1
+
+" show warn and err in a window, and keep it open
+"let g:ale_open_list = 1
+"let g:ale_keep_list_window_open = 1
+
+" default layout: horizontal
+"let g:ale_list_vertical = 1
+
+" Show 5 lines of errors (default: 10)
+" let g:ale_list_window_size = 5
+"""""""""""""""""""""""""""""""""""""""
