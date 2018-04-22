@@ -52,33 +52,11 @@ pip install -U distribute && pip freeze --local | grep -v '^\-e' | cut -d = -f 1
 # ~/.config/pip/pip.conf
 ```
 
-## wifi problem
+## [wifi problem](https://segmentfault.com/a/1190000014526581)
 ```bash
-cat /etc/modprobe.d/rtl8723be.conf
-
-options rtl8723be swenc=0
-options rtl8723be ips=1
-options rtl8723be swlps=0
-options rtl8723be fwlps=1
-options rtl8723be msi=0
-options rtl8723be debug=1
-options rtl8723be disable_watchdog=1
-options rtl8723be ant_sel=2
-
-# swenc:Set to 1 for software crypto (default 0)
-# ips:Set to 0 to not use link power save (default 1)
-# swlps:Set to 1 to use SW control power save (default 0)
-# fwlps:Set to 1 to use FW control power save (default 1)
-# msi:Set to 1 to use MSI interrupts mode (default 0)
-# debug:Set debug level (0-5) (default 0) (int)
-# disable_watchdog:Set to 1 to disable the watchdog (default 0)
-# ant_sel:Set to 1 or 2 to force antenna number (default 0)
-
 # =
 lspci | grep Wireless
 sudo modinfo rtl8723be
-# -
-modprobe -r rtl8723be
-# +
-modprobe rtl8723be
 ```
+
+
