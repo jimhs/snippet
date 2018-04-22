@@ -53,6 +53,10 @@ pip install -U distribute && pip freeze --local | grep -v '^\-e' | cut -d = -f 1
 ```
 
 ## [wifi problem](https://segmentfault.com/a/1190000014526581)
+https://ubuntuforums.org/showthread.php?t=1543006&page=165&p=13403380#post13403380
+https://ubuntuforums.org/showthread.php?t=2243978
+https://github.com/lwfinger/rtlwifi_new/issues/28
+https://github.com/lwfinger/rtlwifi_new/issues/87
 ```bash
 # =
 lspci | grep Wireless

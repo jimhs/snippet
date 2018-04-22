@@ -109,7 +109,7 @@ alias lz='curl wttr.in/~liuzhou'
 # fr os.version_info
 alias osinfo="python ~/snippets/wheels/python/osinfo.py"
 # restart sougu if crash
-alias sogou="ps aux | grep fcitx | awk 'NR==1 {print $2}' | xargs kill"
+alias sogou=`ps aux | grep fcitx | awk 'NR==1 {print $2}' | xargs kill`
 # band test
 alias band="dd if=/dev/zero of=/dev/null bs=1M count=32768"
 # see my ip
