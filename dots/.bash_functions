@@ -1,10 +1,16 @@
-# List all functions
+# List functions
+# no arg: list all
+# with args: list args
 listfunc () {
-  for func in $(compgen -A function | grep -v _)
-  do
-    declare -f $func
-    echo -e "\r"
-  done
+    if [ $# -eq 0 ]; then
+        compgen -A function | grep -v _
+    else
+        for func in "$@"
+        do
+           declare -f $func
+           echo -e "\r"
+        done
+    fi;
 }
 
 ###
@@ -66,3 +72,11 @@ function q-extract() {
     q-extract_ $1 &&  rm $1
     popd
 }>/dev/null
+
+# `tre` is a shorthand for `tree` with hidden files and color enabled, ignoring
+# the `.git` directory, listing directories first. The output gets piped into
+# `less` with options to preserve color and line numbers, unless the output is
+# small enough for one screen.
+function tre() {
+	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
+}
