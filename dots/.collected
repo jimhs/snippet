@@ -39,3 +39,9 @@ bind -x '"\C-l":ls -l'
 # 34359738368 bytes (34 GB, 32 GiB) copied, 2.17603 s, 15.8 GB/s
 dd if=/dev/zero of=/dev/null bs=1M count=32768
 
+# @may
+
+# set conda mirror in ~/.condarc
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --set show_channel_urls yes
