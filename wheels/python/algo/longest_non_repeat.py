@@ -16,6 +16,7 @@ def lnr(s):
     ss = []
     u = []
     while i < len(s):
+        # no need to use set(u)
         if s[i] not in u:
             u.append(s[i])
             i = i + 1
@@ -23,4 +24,7 @@ def lnr(s):
         if len(u) > len(ss):
             ss = u[:]
             u = []
-    return ss
+    return "".join(ss)
+
+
+assert lnr('pwwkew') == 'wke'
