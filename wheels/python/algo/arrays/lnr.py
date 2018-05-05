@@ -25,6 +25,3 @@ def lnr(s):
             ss = u[:]
             u = []
     return "".join(ss)
-
-
-assert lnr('pwwkew') == 'wke'
