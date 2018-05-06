@@ -4,6 +4,8 @@ from arrays.garage import g
 from arrays.lnr import lnr
 from arrays.zeros_to_end import ze
 from arrays.rot_arr import r0, r1, r2, r3
+from arrays.two_sum import ts
+from arrays.three_sum import ths
 
 import unittest
 
@@ -74,6 +76,21 @@ class TestArrays(unittest.TestCase):
         self.assertListEqual(r1(a, k), r)
         self.assertListEqual(r2(a, k), r)
         self.assertListEqual(r3(a, k), r)
+
+    def test_two_sums(self):
+
+        a = [1, 1, 2, 3, 4]
+        r = [(2, 3), (1, 4)]
+        t = 5
+
+        self.assertListEqual(ts(a, t), r)
+
+    def test_three_sum(self):
+
+        a = [-4, 0, 1, 3, 4]
+
+        self.assertEqual(ths(a, 0), {(-4, 0, 4), (-4, 1, 3)})
+        self.assertEqual(ths(a, 6), set())
 
 
 if __name__ == '__main__':
