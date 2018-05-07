@@ -13,6 +13,7 @@ export Downloads="$HOME/Downloads"
 export Desktop="$HOME/Desktop/"
 export sitepackages="$HOME/anaconda3/lib/python3.6/site-packages"
 export awk_="/usr/share/awk/"
+export algo="$HOME/snippets/wheels/python/algo"
 
 alias g="git"
 

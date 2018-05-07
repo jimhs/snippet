@@ -6,6 +6,9 @@ from arrays.zeros_to_end import ze
 from arrays.rot_arr import r0, r1, r2, r3
 from arrays.two_sum import ts
 from arrays.three_sum import ths
+from arrays.missing_ranges import mr
+from arrays.summary_ranges import sr
+from arrays.plus_one import po0, po1
 
 import unittest
 
@@ -91,6 +94,37 @@ class TestArrays(unittest.TestCase):
 
         self.assertEqual(ths(a, 0), {(-4, 0, 4), (-4, 1, 3)})
         self.assertEqual(ths(a, 6), set())
+
+    def test_missing_ranges(self):
+
+        a = [2, 3, 8]
+        b = []
+        p, q = 1, 10
+
+        self.assertListEqual(mr(a, p, q), [(1, 1), (4, 7), (9, 10)])
+        self.assertListEqual(mr(b, p, q), [(1, 10)])
+
+    def test_summary_ranges(self):
+
+        a = [0, 1, 2, 4, 5, 7]
+        b = [2]
+
+        self.assertListEqual(sr(a), [(0, 2), (4, 5), (7, 7)])
+        self.assertListEqual(sr(b), [(2, 2)])
+
+    def test_plus_one(self):
+
+        a = [0]
+
+        for i in range(101):
+            po0(a)
+
+        self.assertListEqual(a, [1, 0, 1])
+
+        for i in range(101):
+            po1(a)
+
+        self.assertListEqual(a, [2, 0, 2])
 
 
 if __name__ == '__main__':
