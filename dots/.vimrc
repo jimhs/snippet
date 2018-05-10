@@ -18,6 +18,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'posva/vim-vue'
+Plugin 'digitaltoad/vim-pug'
 
 "auto complete
 Plugin 'mattn/emmet-vim'
@@ -32,8 +33,9 @@ Plugin 'w0rp/ale'
 "Plugin 'walm/jshint.vim'
 "Plugin 'nvie/vim-flake8'
 
-"css/less/sass/html color preview
+"css/less/sass/html/styl color preview
 Plugin 'gorodinskiy/vim-coloresque'
+Plugin 'iloginow/vim-stylus'
 
 "color/theme
 " Plugin 'flazz/vim-colorschemes'
