@@ -81,6 +81,7 @@ function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
 
+# perm s,S will trigger permission deny error
 function syncudisk() {
 
 	source $HOME/.self/.exports
@@ -89,7 +90,7 @@ function syncudisk() {
 	do
 		if [ -d $HOME_$folder ]
 		then
-			rsync -az -L $HOME_$folder $UDISK_$folder
+			rsync -az -L --delete $HOME_$folder $UDISK_$folder
 		fi
 	done
 }
