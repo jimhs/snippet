@@ -121,20 +121,3 @@ export PS1='[\[\033[33m\]$(t | wc -l | sed -e"s/ *//")\[\033[0m\]]'" $PS1"
 # re-source
 alias sb="source ~/.bashrc"
 
-# rsync ssh
-# chmod -R 700 dest
-#
-# rsync -avz source/ user@host:dest/
-# -v verbose
-# -z compress during transfer
-# -a = -rlptgoD (no -H,-A,-X)
-#                   -H preserve hard links
-#                   -A preserve ACLs (implies -p)
-#                   -X preserve extended attributes
-#      -r recurse into directories
-#      -l copy symlinks as symlinks
-#      -p preserve permission
-#      -t preserve mod time
-#      -g preserve group
-#      -o preserve owner
-#      -D --devices --specials

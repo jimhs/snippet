@@ -47,7 +47,7 @@ lynx -dump http://www.mutt.org/screenshots/ | awk '/http/{print $2}' | grep gif 
 # pip update all
 pip install -U distribute && pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
 
-# pip speedup 
+# pip speedup
 # https://segmentfault.com/q/1010000000162410
 # ~/.config/pip/pip.conf
 ```
@@ -63,4 +63,22 @@ lspci | grep Wireless
 sudo modinfo rtl8723be
 ```
 
-
+```
+# rsync ssh
+# chmod -R 700 dest
+#
+# rsync -avz source/ user@host:dest/
+# -v verbose
+# -z compress during transfer
+# -a = -rlptgoD (no -H,-A,-X)
+#                   -H preserve hard links
+#                   -A preserve ACLs (implies -p)
+#                   -X preserve extended attributes
+#      -r recurse into directories
+#      -l copy symlinks as symlinks
+#      -p preserve permission
+#      -t preserve mod time
+#      -g preserve group
+#      -o preserve owner
+#      -D --devices --specials
+```
