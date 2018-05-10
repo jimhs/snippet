@@ -80,3 +80,16 @@ function q-extract() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+function syncudisk() {
+
+	source $HOME/.self/.exports
+	
+	for folder in $HOME_FOLDERS
+	do
+		if [ -d $HOME_$folder ]
+		then
+			rsync -az -L $HOME_$folder $UDISK_$folder
+		fi
+	done
+}
