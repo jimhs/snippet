@@ -22,7 +22,6 @@ man () {
   /usr/bin/man $@ || (help $@ 2> /dev/null && help $@ | less)
 }
 
-
 # 自动压缩：判断后缀名并调用相应压缩程序
 function q-compress() {
     if [ -n "$1" ] ; then
@@ -85,7 +84,7 @@ function tre() {
 function syncudisk() {
 
 	source $HOME/.self/.exports
-	
+
 	for folder in $HOME_FOLDERS
 	do
 		if [ -d $HOME_$folder ]
@@ -93,4 +92,14 @@ function syncudisk() {
 			rsync -az -L --delete $HOME_$folder $UDISK_$folder
 		fi
 	done
+}
+
+# git repo clone and backup
+# todo@may.12 : +git pull
+function clone() {
+    cd "$HOME/repo/others"
+    git clone "$1" && cd -
+    if [ -d /media/jimhs/LOADED ]; then
+        syncudisk
+    fi
 }

@@ -27,6 +27,3 @@ fi
 # else
 # 	export TERM='xterm-color'
 # fi
-
-# @Apr.14
-/usr/bin/setxkbmap -option "caps:swapescape"

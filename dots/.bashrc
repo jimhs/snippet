@@ -129,3 +129,6 @@ export LESS_TERMCAP_ZN=""
 export LESS_TERMCAP_se=$'\E[27m\E(B\E[m'
 export LESS_TERMCAP_ZV=""
 export LESS_TERMCAP_so=$'\E[1m\E[33m\E[44m'
+
+# @Apr.14
+/usr/bin/setxkbmap -option "caps:swapescape"

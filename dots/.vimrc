@@ -52,7 +52,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'honza/vim-snippets'
 Plugin 'kien/ctrlp.vim'
-Plugin 'majutsushi/tagbar'
+" Plugin 'majutsushi/tagbar'
 """"""""""""""""""""""""""""""
 call vundle#end()
 
@@ -151,7 +151,8 @@ nnoremap <F2> :set nonu!<CR>:set foldcolumn=0<CR>
 "nmap <silent> <F3> :NERDTreeToggle<CR>
 
 " F4显示TagList
-nmap <silent> <F4> :TagbarToggle<CR>
+" del cause it goes mad
+" nmap <silent> <F4> :TagbarToggle<CR>
 
 " <F6> 新建标签页
 "map <F6> <Esc>:tabnew<CR>
