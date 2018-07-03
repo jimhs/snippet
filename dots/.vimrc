@@ -34,7 +34,7 @@ Plugin 'w0rp/ale'
 "Plugin 'nvie/vim-flake8'
 
 "css/less/sass/html/styl color preview
-Plugin 'gorodinskiy/vim-coloresque'
+" Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'iloginow/vim-stylus'
 
 "color/theme
@@ -52,7 +52,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'honza/vim-snippets'
 Plugin 'kien/ctrlp.vim'
-" Plugin 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 """"""""""""""""""""""""""""""
 call vundle#end()
 
@@ -152,7 +152,7 @@ nnoremap <F2> :set nonu!<CR>:set foldcolumn=0<CR>
 
 " F4显示TagList
 " del cause it goes mad
-" nmap <silent> <F4> :TagbarToggle<CR>
+nmap <F4> :TagbarToggle<CR>
 
 " <F6> 新建标签页
 "map <F6> <Esc>:tabnew<CR>
