@@ -105,8 +105,6 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
 # @apr
 # correct color of tmux; no need
 # alias tmux="TERM=screen-256color-bce tmux"
-# 查看天气预报
-alias lz='curl wttr.in/~liuzhou'
 # fr os.version_info
 alias osinfo="python ~/snippets/wheels/python/osinfo.py"
 # restart sougu if crash

@@ -1,7 +1,7 @@
 # List functions
 # no arg: list all
 # with args: list args
-listfunc () {
+listfunc() {
     if [ $# -eq 0 ]; then
         compgen -A function | grep -v _
     else
@@ -13,23 +13,29 @@ listfunc () {
     fi;
 }
 
-###
-## man
-#
+# weather
+weather() {
+    if [ $# -eq 0 ]; then
+        curl wttr.in/~liuzhou
+    else
+        curl "wttr.in/~$1"
+    fi;
+}
 
 # Better man, as per http://lifehacker.com/#!5778769/make-the-man-command-more-useful-in-linux-and-os-x
-man () {
+# w/t 'help' as fallback
+man() {
   /usr/bin/man $@ || (help $@ 2> /dev/null && help $@ | less)
 }
 
 # 自动压缩：判断后缀名并调用相应压缩程序
-function q-compress() {
+q-compress() {
     if [ -n "$1" ] ; then
         FILE=$1
         case $FILE in
         *.tar) shift && tar -cf $FILE $* ;;
         *.tar.bz2) shift && tar -cjf $FILE $* ;;
-        *.tar.xz) shift && tar -cJf $FILE $* ;;
+        /.tar.xz) shift && tar -cJf $FILE $* ;;
         *.tar.gz) shift && tar -czf $FILE $* ;;
         *.tgz) shift && tar -czf $FILE $* ;;
         *.zip) shift && zip $FILE $* ;;
@@ -41,7 +47,7 @@ function q-compress() {
 }
 
 # 自动解压：判断文件后缀名并调用相应解压命令
-function q-extract_() {
+q-extract_() {
     if [ -f $1 ] ; then
         case $1 in
         *.tar.bz2)   tar -xvjf $1    ;;
@@ -64,7 +70,7 @@ function q-extract_() {
 }
 
 
-function q-extract() {
+q-extract() {
     fname=$(echo $1 | cut -d'.' -f1)
     mkdir $fname && cp $1 $fname
     pushd $fname
@@ -76,12 +82,12 @@ function q-extract() {
 # the `.git` directory, listing directories first. The output gets piped into
 # `less` with options to preserve color and line numbers, unless the output is
 # small enough for one screen.
-function tre() {
+tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
 
 # perm s,S will trigger permission deny error
-function syncudisk() {
+syncudisk() {
 
 	source $HOME/.self/.exports
 
@@ -96,10 +102,11 @@ function syncudisk() {
 
 # git repo clone and backup
 # todo@may.12 : +git pull
-function clone() {
+clone() {
     cd "$HOME/repo/others"
     git clone "$1" && cd -
     if [ -d /media/jimhs/LOADED ]; then
         syncudisk
     fi
 }
+
