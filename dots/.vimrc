@@ -189,7 +189,12 @@ nnoremap <C-Right> <C-w>>
 nnoremap <C-Up> <C-w>+
 nnoremap <C-Down> <C-w>-
 
+cnoremap <expr> %% getcmdtype( ) == ':'?expand('%:h').'/':'%%'
 """"""""""""""""""""""""""""""PLUGIN CONFIG""""""""""""""""""""""""""
+" ctags
+nnoremap <F5> : !ctags -R<CR>
+" 每次保存文件时自动调用ctags (Neil p240)
+" autocmd BufWritePost * call system("ctags -R")
 
 "netrw
 let g:netrw_banner = 0 "no banner

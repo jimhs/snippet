@@ -40,6 +40,11 @@ case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
 
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
+
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
@@ -130,5 +135,15 @@ export LESS_TERMCAP_se=$'\E[27m\E(B\E[m'
 export LESS_TERMCAP_ZV=""
 export LESS_TERMCAP_so=$'\E[1m\E[33m\E[44m'
 
+export documents="$HOME/Documents"
+export downloads="$HOME/Downloads"
+export desktop="$HOME/Desktop/"
+export sitepackages="$HOME/anaconda3/lib/python3.6/site-packages"
+export awk_="/usr/share/awk/"
+export algo="$HOME/snippets/wheels/python/algo"
+export urepo="/media/jimhs/LOADED/home/jimhs/repo/others"
+
 # @Apr.14
 /usr/bin/setxkbmap -option "caps:swapescape"
+
+shopt -s cdable_vars
