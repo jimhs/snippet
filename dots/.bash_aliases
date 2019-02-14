@@ -16,8 +16,8 @@ alias g="git"
 alias ls='/bin/ls --color=auto'
 alias la='ls -AF'
 alias ld='ls -d */'
-alias ll='ls -lhFA'
 alias ldd='ls -AF $(ls -A)' # current dir & one level down
+alias ll='ls -lhFA'
 alias lz='du -cskh *'
 
 alias dir='/bin/dir --color=auto'
@@ -67,7 +67,6 @@ alias sogou=`ps aux | grep fcitx | awk 'NR==1 {print $2}' | xargs kill`
 alias band="dd if=/dev/zero of=/dev/null bs=1M count=32768"
 # git:sjl/t
 alias t='python ~/repo/others/t/t.py --task-dir ~/repo/others/t/tasks --list tasks'
-export PS1='[\[\033[33m\]$(t | wc -l | sed -e"s/ *//")\[\033[0m\]]'" $PS1"
 
 ## Software Management
 
