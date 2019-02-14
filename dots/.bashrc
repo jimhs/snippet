@@ -77,6 +77,7 @@ xterm*|rxvt*)
     ;;
 esac
 
+# w/t task surpport
 export PS1='[\[\033[33m\]$(t | wc -l | sed -e"s/ *//")\[\033[0m\]]'" $PS1"
 
 # colored GCC warnings and errors
