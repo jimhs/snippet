@@ -6,13 +6,13 @@ alias g="git"
 
 ## ls
 
-# -A Hide . & ..
-# -a Show all, including . & ..
-# -d List directory entries instead of contents
-# -F Append indicator [*/=@|] to entries
-# -h Human readable: K, M, G, T
-# -l Long
-# -1 Single column
+# -a show all, including . & ..
+# -A [-a] but hide . & ..
+# -d list directory entries instead of contents
+# -F append indicator [*/=@|] to entries
+# -h human readable: K, M, G, T
+# -l long
+# -1 single column
 alias ls='/bin/ls --color=auto'
 alias la='ls -AF'
 alias ld='ls -d */'
