@@ -18,6 +18,7 @@ alias la='ls -AF'
 alias ld='ls -d */'
 alias ldd='ls -AF $(ls -A)' # current dir & one level down
 alias ll='ls -lhFA'
+alias lt='ls -lt'
 alias lz='du -cskh * | sort -h'
 alias lzz='du -cskh * | sort -h | grep -v ^0' # ignore empty folders
 
