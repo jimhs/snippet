@@ -1,7 +1,8 @@
+__fork from:__ [tchapi/markdown-cheatsheet](https://github.com/tchapi/markdown-cheatsheet)
+- - - -
+
 Markdown Cheatsheet
 ===================
-
-- - - - 
 
 # Heading 1 #
 
@@ -48,13 +49,9 @@ ___Strong emphasized text___
 
     Markup :  ___Strong emphasized text___ or ***Strong emphasized text***
 
-[Named Link](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
+[Named Link](http://www.google.fr/) and http://www.google.fr/ or <http://example.com/>
 
-    Markup :  [Named Link](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
-
-[heading-1](#heading-1 "Goto heading-1")
-    
-    Markup: [heading-1](#heading-1 "Goto heading-1")
+    Markup :  [Named Link](http://www.google.fr/) and http://www.google.fr/ or <http://example.com/>
 
 Table, like this one :
 
@@ -75,7 +72,7 @@ Content Cell  | Content Cell
     Markup :  `code()`
 
 ```javascript
-    var specificLanguage_code = 
+    var specificLanguage_code =
     {
         "data": {
             "lookedUpPlatform": 1,
@@ -158,11 +155,6 @@ Foldable text:
                <summary>Title 1</summary>
                <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
              </details>
-
-```html
-<h3>HTML</h3>
-<p> Some HTML code here </p>
-```
 
 Hotkey:
 

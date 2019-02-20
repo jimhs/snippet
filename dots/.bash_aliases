@@ -6,21 +6,19 @@ alias g="git"
 
 ## ls
 
-# -a show all, including . & ..
-# -A [-a] but hide . & ..
-# -d list directory entries instead of contents
-# -F append indicator [*/=@|] to entries
-# -h human readable: K, M, G, T
-# -l long
-# -1 single column
+# -A Hide . & ..
+# -a Show all, including . & ..
+# -d List directory entries instead of contents
+# -F Append indicator [*/=@|] to entries
+# -h Human readable: K, M, G, T
+# -l Long
+# -1 Single column
 alias ls='/bin/ls --color=auto'
 alias la='ls -AF'
 alias ld='ls -d */'
 alias ldd='ls -AF $(ls -A)' # current dir & one level down
 alias ll='ls -lhFA'
-alias lt='ls -lt'
-alias lz='du -cskh * | sort -h'
-alias lzz='du -cskh * | sort -h | grep -v ^0' # ignore empty folders
+alias lz='du -cskh *'
 
 alias dir='/bin/dir --color=auto'
 alias vdir='/bin/vdir --color=auto'
